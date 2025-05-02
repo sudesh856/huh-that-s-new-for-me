@@ -1,0 +1,28 @@
+# Example 1: Unpacking a tuple passed as a function argument
+def greet(name_age):
+    name, age = name_age  # Unpacking the iterable (tuple)
+    print(f"Hello, {name}! You are {age} years old.")
+
+greet(("kamali", 25))
+
+# Here:
+# name = "kamali"
+# age = 25
+# Just unpacking the tuple. Nothing more, no function being pointed to or called.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Example 2: Unpacking a tuple returned by a function
+def myfunc():
+    return ("shila", 21, "dancer")
+
+a, b, c = myfunc()  # This is unpacking the tuple returned by the function
+
+print(a)  # shila
+print(b)  # 21
+print(c)  # dancer
+
+# These are examples of tuple unpacking.
+# It’s not about pointing to any function name — it's just unpacking values from an iterable.
