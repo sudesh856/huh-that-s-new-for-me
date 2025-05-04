@@ -1,0 +1,39 @@
+#so learnt about this:
+say this consisting file name is name.py 
+and not having this is e.py
+if __name__ == '__main__":
+  main()
+
+Basically what it does is that it helps to borrow the piece of code without needing to import full.
+
+if we run the code directly from the file where there is this, then main() is run.
+otherwise if we import name.py as "import name" 
+in the next file "e.py"
+then the __name__ == '__main__':
+    main() WON'T RUN AS THIS IS NOT BEING RUN DIRECTLY.
+
+suppose in e.py there is:
+import name
+name.fav_food("pizza") then only this is run not the main() one.
+
+
+NOTE:
+LET THE SAMPLE CODE IN name.py be: 
+def fav_food(food):
+    print(f"your fav food is {food}")
+
+
+def main():
+    print("this is app.py")
+    fav_food("chicken")
+   
+    print("goodbye")
+
+
+if __name__ == '__main__':
+    main()
+
+
+AND IN e.py be:
+import app
+app.fav_food("chicken")
